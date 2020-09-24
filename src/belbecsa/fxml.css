@@ -1,0 +1,93 @@
+/*
+        fxml.css
+        Author: Sam Belbeck
+        Date: March 20, 2020
+
+        Description:
+        css styles to adjust the look of the GUI display
+
+
+    Created on : Mar. 16, 2020, 10:06:09 p.m.
+    Author     : sbelb
+*/
+
+.mainFxmlClass {
+    .root {
+        -fx-font-family: 'Courier New';
+    }
+
+    #title {
+        -fx-font-family: 'Bruzh';
+        -fx-background-color: lightsalmon;
+        -fx-padding: 25;
+        -fx-background-radius: 50%; 
+    }
+    #menu {
+        -fx-background-color: #27335e;
+        -fx-font-family: 'Amatic SC';
+        -fx-font-size: 1.3em;
+    }   
+    #exit {
+        -fx-background-color: #d66356;
+    }
+    .text {
+        -fx-background-color: #d66356;
+        -fx-background-radius: 30%;
+        -fx-max-width: 70px;
+    }
+    .button {
+        -fx-font-family: 'Permanent Marker';
+        -fx-background-radius: 15;
+        -fx-padding: 5 10 5 10;
+        -fx-min-width: 125;
+        -fx-background-color: #27335e;
+        -fx-text-fill: white;
+    }
+    .button:hover {
+        -fx-background-color: #d66356;
+    }
+    #viewOrder{
+        -fx-padding: 10 0 30 0;
+    }
+    #order {
+        -fx-min-height: 25;
+        -fx-min-width: 315;
+        -fx-font-family: 'Roboto Mono';
+    }
+    .options {
+        -fx-font-family:'Caveat';
+        -fx-background-color: lightsalmon;
+        -fx-background-radius: 15%;
+        -fx-padding: 10;
+        -fx-min-width: 150;
+        -fx-font-size: 1.2em;
+    }
+    .options .label {
+        -fx-text-fill: white;
+        -fx-font-size: 1.3em;
+    }
+    .center {
+        -fx-alignment: center;        
+    }
+    .light {
+        -fx-background-color: lightsalmon;
+    }
+    .mid {
+        -fx-padding: 0 0 10 0;
+        -fx-background-color: #d66356;
+    }
+    .dark {
+        -fx-padding: 20 0 20 0;
+        -fx-background-color: #4682B4;
+    }
+    .large {
+        -fx-padding: 10 0 10 25;
+        -fx-font-size: 2em;  
+        -fx-font-family: 'Amatic SC';
+        -fx-font-weight: 200;
+    }
+    .label {
+        -fx-text-fill: white;
+    }
+
+}

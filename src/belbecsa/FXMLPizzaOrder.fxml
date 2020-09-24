@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox id="VBox" styleClass="mainFxmlClass, center" xmlns:fx="http://javafx.com/fxml/1" fx:controller="belbecsa.PizzaOrderController">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>  
+    <fx:define>
+        <ToggleGroup fx:id="sizes" />
+        <ToggleGroup fx:id="drinks" />
+    </fx:define>    
+    <children>
+        <MenuBar id="menu">
+            <Menu id="file" text="_File">
+                <MenuItem styleClass="menu" id="exit" fx:id="exit" onAction="#clickExit" text="E_xit" />
+            </Menu>
+        </MenuBar>
+        <HBox spacing="10" id="header" styleClass="dark, center" >
+            <Label id="title" fx:id="title" styleClass="large" text="Pizzeria Assignment 4" />
+        </HBox>
+        <Label styleClass="mid, large" prefWidth="2000" text="Place your order:" />
+        <HBox styleClass="mid, center" spacing="20">
+            <VBox spacing="5" styleClass="options">
+                <Label text="Pizza Size" />
+                <RadioButton fx:id="small" toggleGroup="$sizes" text="Small" />
+                <RadioButton fx:id="medium" toggleGroup="$sizes" text="Medium" />
+                <RadioButton fx:id="large" toggleGroup="$sizes" text="Large" />
+                <TextField styleClass="text" fx:id="numPizzas" promptText="# Pizzas" maxWidth ="150" />
+            </VBox>
+             <VBox spacing="5" styleClass="options">
+                <Label text="Toppings" />
+                <CheckBox fx:id="cheese" text="Cheese" />
+                <CheckBox fx:id="pepperoni" text="Pepperoni" />
+                <CheckBox fx:id="mushrooms" text="Mushrooms" />
+                <CheckBox fx:id="olives" text="Olives" />                
+            </VBox>
+            <VBox spacing="5" styleClass="options">
+                <Label text="Drinks" />            
+                <RadioButton fx:id="coke" toggleGroup="$drinks" text="Coke" />
+                <RadioButton fx:id="juice" toggleGroup="$drinks" text="Juice" />
+                <RadioButton fx:id="chocolateMilk" toggleGroup="$drinks" text="Chocolate Milk" />
+                <TextField styleClass="text" fx:id="numDrinks" promptText="# Drinks"/>
+            </VBox>  
+        </HBox>
+        <HBox spacing="20" styleClass="dark, center"> 
+            <Button fx:id="submit" onAction="#buttonClick" text="Submit _Order"/>
+            <Button fx:id="clear" onAction="#buttonClick" text="Clea_r"/>
+            <Button fx:id="cancel" onAction="#clickExit" text="_Cancel"/>
+        </HBox>
+        <VBox id="viewOrder" styleClass="light, center">
+        <Label styleClass="large" prefWidth="2000" text="Ordered Items:" />
+            <HBox spacing="15" alignment="center">
+                <ImageView id="pizzaPic" fx:id="pizzaPic" fitHeight="225" preserveRatio="true">
+                </ImageView>
+                <TextArea id="order" prefWidth="300" styleClass="small" fx:id="orderedItems"/>
+            </HBox>
+        </VBox>
+    </children>
+</VBox>
